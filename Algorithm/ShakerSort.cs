@@ -12,6 +12,7 @@ namespace Algorithm
 
             while(left < right)
             {
+                var preOutCounter = SwopCount;
                 for (int i = left; i < right; i++)
                 {
                     if (Items[i].CompareTo(Items[i + 1]) == 1)
@@ -22,6 +23,11 @@ namespace Algorithm
                 }
                 right--;
 
+                if (preOutCounter == SwopCount)
+                {
+                    break;
+                }
+
                 for (int i = right; i > left; i--)
                 {
                     if (Items[i].CompareTo(Items[i - 1]) == -1)
@@ -31,6 +37,11 @@ namespace Algorithm
                     }
                 }
                 left++;
+
+                if (preOutCounter == SwopCount)
+                {
+                    break;
+                }
             }
         }
     }

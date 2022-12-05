@@ -24,6 +24,7 @@ namespace Algorithm
 
         public virtual void Sort()
         {
+            SwopCount = 0;
             Items.Sort();
         }
     }
