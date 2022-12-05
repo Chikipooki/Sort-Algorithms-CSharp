@@ -6,6 +6,7 @@ namespace Algorithm
     {
         public override void Sort()
         {
+            SwopCount = 0;
             int left = 0;
             int right = Items.Count - 1;
 
@@ -16,6 +17,7 @@ namespace Algorithm
                     if (Items[i].CompareTo(Items[i + 1]) == 1)
                     {
                         Swop(i, i + 1);
+                        ComparisonCount++;
                     }
                 }
                 right--;
@@ -25,6 +27,7 @@ namespace Algorithm
                     if (Items[i].CompareTo(Items[i - 1]) == -1)
                     {
                         Swop(i, i - 1);
+                        ComparisonCount++;
                     }
                 }
                 left++;

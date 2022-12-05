@@ -25,7 +25,7 @@ namespace Algorithm.Tests
             }
 
             bubble.Items.AddRange(items);
-            items.Sort();
+            var sorted = items.OrderBy(x => x).ToArray();
 
             // Act
             bubble.Sort();
@@ -33,9 +33,8 @@ namespace Algorithm.Tests
             // Assert
             for(int i = 0; i < items.Count; i++)
             {
-                Assert.AreEqual(items[i], bubble.Items[i]);
-            }
-               
+                Assert.AreEqual(sorted[i], bubble.Items[i]);
+            }  
         }
     }
 }
