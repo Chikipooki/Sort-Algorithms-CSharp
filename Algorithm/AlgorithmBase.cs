@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace Algorithm
 {
@@ -22,9 +23,20 @@ namespace Algorithm
             }
         }
 
-        public virtual void Sort()
+        public TimeSpan Sort()
         {
+            var timer = new Stopwatch();
             SwopCount = 0;
+
+            timer.Start();
+            MakeSort();
+            timer.Stop();
+
+            return timer.Elapsed;
+        }
+
+        protected virtual void MakeSort()
+        {
             Items.Sort();
         }
     }

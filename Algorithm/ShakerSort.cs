@@ -4,9 +4,8 @@ namespace Algorithm
 {
     public class ShakerSort<T> : AlgorithmBase<T> where T : IComparable
     {
-        public override void Sort()
+        protected override void MakeSort()
         {
-            SwopCount = 0;
             int left = 0;
             int right = Items.Count - 1;
 
