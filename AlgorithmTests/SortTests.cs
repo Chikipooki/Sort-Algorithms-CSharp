@@ -94,5 +94,22 @@ namespace Algorithm.Tests
                 Assert.AreEqual(Sorted[i], shell.Items[i]);
             }
         }
+
+        [TestMethod()]
+        public void BaseSortTest()
+        {
+            // Arrange
+            var bases = new AlgorithmBase<int>();
+            bases.Items.AddRange(Items);
+
+            // Act
+            bases.Sort();
+
+            // Assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], bases.Items[i]);
+            }
+        }
     }
 }
