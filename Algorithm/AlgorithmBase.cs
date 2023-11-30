@@ -5,8 +5,10 @@ namespace Algorithm
 {
     public class AlgorithmBase<T> where T: IComparable
     {
-        public List<T> Items { get; set; } = new List<T>();
+        public int SwopCount { get; protected set; } = 0;
+        public int ComparsionCount { get; protected set; } = 0;
 
+        public List<T> Items { get; set; } = new List<T>();
         /// <summary>
         /// Сравнивает текущий экземпляр с другим объектом того же типа и меняет местами текущий и другой объект.  
         /// </summary>
@@ -19,11 +21,14 @@ namespace Algorithm
                 var temp = Items[positionA];
                 Items[positionA] = Items[positionB];
                 Items[positionB] = temp;
+
+                SwopCount++;
             }
         }
 
         public virtual void Sort()
         {
+            SwopCount = 0;
             Items.Sort();
         }
     }

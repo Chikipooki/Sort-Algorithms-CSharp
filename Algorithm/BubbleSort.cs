@@ -18,6 +18,8 @@ namespace Algorithm
                     if (a.CompareTo(b) == 1)
                     {
                         Swop(i, i + 1);
+
+                        ComparsionCount++;
                     }
                 }
             }

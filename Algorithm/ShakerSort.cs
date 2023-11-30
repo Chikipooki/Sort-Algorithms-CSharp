@@ -11,23 +11,39 @@ namespace Algorithm
 
             while (left < right)
             {
+                var preOutCounter = SwopCount;
+
                 for (var i = left; i < right; i++)
                 {
                     if (Items[i].CompareTo(Items[i + 1]) == 1)
                     {
                         Swop(i, i + 1);
+
+                        ComparsionCount++;
                     }
                 }
                 right--;
 
-                for(int i = right; i > left; i--)
+                if (preOutCounter == SwopCount)
+                {
+                    break;
+                }
+
+                for (int i = right; i > left; i--)
                 {
                     if (Items[i].CompareTo(Items[i-1]) == -1)
                     {
                         Swop(i, i - 1);
+
+                        ComparsionCount++;
                     }
                 }
                 left++;
+
+                if (preOutCounter == SwopCount)
+                {
+                    break;
+                }
             }
         }
     }
