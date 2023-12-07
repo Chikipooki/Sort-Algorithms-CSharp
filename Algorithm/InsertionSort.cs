@@ -14,6 +14,10 @@ namespace Algorithm
                 while (j > 0 && temp.CompareTo(Items[j - 1]) == -1)
                 {
                     Items[j] = Items[j - 1];
+                    j--;
+
+                    SwopCount++;
+                    ComparsionCount++;
                 }
                 Items[j] = temp;
             }
