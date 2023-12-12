@@ -20,9 +20,9 @@ namespace Algorithm.Tests
         {
             Items.Clear();
 
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 10000; i++)
             {
-                Items.Add(rnd.Next(0, 100));
+                Items.Add(rnd.Next(0, 1000));
             }
 
             Sorted.Clear();
@@ -77,6 +77,23 @@ namespace Algorithm.Tests
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(Sorted[i], Insert.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void ShellTest()
+        {
+            //arrenge
+            var shell = new ShellSort<int>();
+            shell.Items.AddRange(Items);
+
+            //act
+            shell.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], shell.Items[i]);
             }
         }
     }
