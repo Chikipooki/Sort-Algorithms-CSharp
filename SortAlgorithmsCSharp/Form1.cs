@@ -22,11 +22,9 @@ namespace SortAlgorithmsCSharp
             {
                 var item = new SortedItem(value, items.Count);
                 items.Add(item);
-
-                panel3.Controls.Add(item.ProgressBar);
-                panel3.Controls.Add(item.Label);
             }
 
+            RefreshItems();
             AddTextBox.Text = " ";
         }
 
@@ -40,17 +38,38 @@ namespace SortAlgorithmsCSharp
                 {
                     var item = new SortedItem(rnd.Next(0, 100), items.Count);
                     items.Add(item);
-
-                    panel3.Controls.Add(item.ProgressBar);
-                    panel3.Controls.Add(item.Label);
                 }
             }
 
+            RefreshItems();
             FillTextBox.Text = " ";
+        }
+
+        private void DrawItems(List<SortedItem> items)
+        {
+            panel3.Controls.Clear();
+
+            foreach (var item in items)
+            {
+                panel3.Controls.Add(item.ProgressBar);
+                panel3.Controls.Add(item.Label);
+            }
+        }
+
+        private void RefreshItems()
+        {
+            foreach (var item in items)
+            {
+                item.Refresh();
+            }
+
+            DrawItems(items);
         }
 
         private void BubbleSortBtn_Click(object sender, EventArgs e)
         {
+            RefreshItems();
+
             var bubble = new BubbleSort<SortedItem>(items);
             bubble.CompareEvent += Bubble_CompereEvent;
             bubble.SwopEvent += Bubble_SwopEvent;
