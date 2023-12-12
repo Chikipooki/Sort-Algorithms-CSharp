@@ -73,7 +73,11 @@ namespace SortAlgorithmsCSharp
             var bubble = new BubbleSort<SortedItem>(items);
             bubble.CompareEvent += Bubble_CompereEvent;
             bubble.SwopEvent += Bubble_SwopEvent;
-            bubble.Sort();
+            var time = bubble.Sort();
+
+            TimeLbl.Text = "Время: " + time.Seconds;
+            CompareCountLbl.Text = "Количество сравнений: " + bubble.ComparsionCount;
+            SwopCountLbl.Text = "Количество обменов: " + bubble.SwopCount;
         }
 
         private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
