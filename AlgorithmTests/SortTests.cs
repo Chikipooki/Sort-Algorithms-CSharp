@@ -30,7 +30,24 @@ namespace Algorithm.Tests
         }
 
         [TestMethod()]
-        public void BubbleTest()
+        public void BaseSortTest()
+        {
+            //arrenge
+            var bases = new AlgorithmBase<int>();
+            bases.Items.AddRange(Items);
+
+            //act
+            bases.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], bases.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void BubbleSortTest()
         {
             //arrenge
             var bubble = new BubbleSort<int>();
@@ -47,7 +64,7 @@ namespace Algorithm.Tests
         }
 
         [TestMethod()]
-        public void ShakerTest()
+        public void ShakerSortTest()
         {
             //arrenge
             var shaker = new ShakerSort<int>();
@@ -64,7 +81,7 @@ namespace Algorithm.Tests
         }
 
         [TestMethod()]
-        public void InsertionTest()
+        public void InsertionSortTest()
         {
             //arrenge
             var Insert = new InsertionSort<int>();
@@ -81,7 +98,7 @@ namespace Algorithm.Tests
         }
 
         [TestMethod()]
-        public void ShellTest()
+        public void ShellSortTest()
         {
             //arrenge
             var shell = new ShellSort<int>();
