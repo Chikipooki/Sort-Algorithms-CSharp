@@ -37,6 +37,7 @@
             this.FillBtn = new System.Windows.Forms.Button();
             this.FillTextBox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.BubbleSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -122,11 +123,22 @@
             this.panel3.Size = new System.Drawing.Size(656, 202);
             this.panel3.TabIndex = 4;
             // 
+            // BubbleSortBtn
+            // 
+            this.BubbleSortBtn.Location = new System.Drawing.Point(12, 220);
+            this.BubbleSortBtn.Name = "BubbleSortBtn";
+            this.BubbleSortBtn.Size = new System.Drawing.Size(129, 42);
+            this.BubbleSortBtn.TabIndex = 5;
+            this.BubbleSortBtn.Text = "BubbleSort";
+            this.BubbleSortBtn.UseVisualStyleBackColor = true;
+            this.BubbleSortBtn.Click += new System.EventHandler(this.BubbleSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 652);
+            this.Controls.Add(this.BubbleSortBtn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.Button FillBtn;
         private System.Windows.Forms.TextBox FillTextBox;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button BubbleSortBtn;
     }
 }
 

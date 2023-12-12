@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Label = System.Windows.Forms.Label;
 
 namespace SortAlgorithms
@@ -27,9 +21,9 @@ namespace SortAlgorithms
             Label = new Label();
 
             var X_locationOfProgBar = number * 20;
-            // 
+            //
             // verticalProgressBar1
-            // 
+            //
             ProgressBar.BorderStyle = VerticalProgressBar.BorderStyles.Classic;
             ProgressBar.Color = Color.Blue;
             ProgressBar.Location = new Point(X_locationOfProgBar, 3);
@@ -41,9 +35,9 @@ namespace SortAlgorithms
             ProgressBar.Style = VerticalProgressBar.Styles.Solid;
             ProgressBar.TabIndex = number;
             ProgressBar.Value = Value;
-            // 
+            //
             // ScoreLabel
-            // 
+            //
             Label.AutoSize = true;
             Label.Location = new Point(X_locationOfProgBar, 102);
             Label.Name = "ScoreLabel" + number;

@@ -2,9 +2,9 @@
 
 namespace Algorithm
 {
-    public class ShakerSort<T> : AlgorithmBase<T> where T : IComparable 
+    public class ShakerSort<T> : AlgorithmBase<T> where T : IComparable
     {
-        public override void Sort()
+        protected override void MakeSort()
         {
             var left = 0;
             var right = Items.Count - 1;
