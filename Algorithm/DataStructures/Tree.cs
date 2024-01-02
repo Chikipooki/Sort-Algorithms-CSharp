@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Algorithm.DataStructures
 {
@@ -10,7 +7,9 @@ namespace Algorithm.DataStructures
     {
         public Node<T> Root { get; private set; }
         public int Counter { get; private set; }
+
         public Tree() { }
+
         public Tree(IEnumerable<T> items)
         {
             foreach (var item in items)
