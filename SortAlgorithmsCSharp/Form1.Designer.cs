@@ -43,6 +43,7 @@
             this.SwopCountLbl = new System.Windows.Forms.Label();
             this.ShakerSortBtn = new System.Windows.Forms.Button();
             this.InsertionSortBtn = new System.Windows.Forms.Button();
+            this.ShellSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -185,11 +186,22 @@
             this.InsertionSortBtn.UseVisualStyleBackColor = true;
             this.InsertionSortBtn.Click += new System.EventHandler(this.InsertionSortBtn_Click);
             // 
+            // ShellSortBtn
+            // 
+            this.ShellSortBtn.Location = new System.Drawing.Point(417, 220);
+            this.ShellSortBtn.Name = "ShellSortBtn";
+            this.ShellSortBtn.Size = new System.Drawing.Size(129, 42);
+            this.ShellSortBtn.TabIndex = 11;
+            this.ShellSortBtn.Text = "Shell Sort";
+            this.ShellSortBtn.UseVisualStyleBackColor = true;
+            this.ShellSortBtn.Click += new System.EventHandler(this.ShellSortBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 652);
+            this.Controls.Add(this.ShellSortBtn);
             this.Controls.Add(this.InsertionSortBtn);
             this.Controls.Add(this.ShakerSortBtn);
             this.Controls.Add(this.SwopCountLbl);
@@ -227,6 +239,7 @@
         private System.Windows.Forms.Label SwopCountLbl;
         private System.Windows.Forms.Button ShakerSortBtn;
         private System.Windows.Forms.Button InsertionSortBtn;
+        private System.Windows.Forms.Button ShellSortBtn;
     }
 }
 

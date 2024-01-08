@@ -122,5 +122,11 @@ namespace SortAlgorithmsCSharp
             var insertion = new InsertionSort<SortedItem>(items);
             BtnClick(insertion);
         }
+
+        private void ShellSortBtn_Click(object sender, EventArgs e)
+        {
+            var shell = new ShellSort<SortedItem>(items);
+            BtnClick(shell);
+        }
     }
 }
