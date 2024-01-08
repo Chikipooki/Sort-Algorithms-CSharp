@@ -117,6 +117,10 @@ namespace SortAlgorithmsCSharp
             BtnClick(shaker);
         }
 
-
+        private void InsertionSortBtn_Click(object sender, EventArgs e)
+        {
+            var insertion = new InsertionSort<SortedItem>(items);
+            BtnClick(insertion);
+        }
     }
 }

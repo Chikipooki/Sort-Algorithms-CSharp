@@ -42,6 +42,7 @@
             this.CompareCountLbl = new System.Windows.Forms.Label();
             this.SwopCountLbl = new System.Windows.Forms.Label();
             this.ShakerSortBtn = new System.Windows.Forms.Button();
+            this.InsertionSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -133,7 +134,7 @@
             this.BubbleSortBtn.Name = "BubbleSortBtn";
             this.BubbleSortBtn.Size = new System.Drawing.Size(129, 42);
             this.BubbleSortBtn.TabIndex = 5;
-            this.BubbleSortBtn.Text = "BubbleSort";
+            this.BubbleSortBtn.Text = "Bubble Sort";
             this.BubbleSortBtn.UseVisualStyleBackColor = true;
             this.BubbleSortBtn.Click += new System.EventHandler(this.BubbleSortBtn_Click);
             // 
@@ -170,15 +171,26 @@
             this.ShakerSortBtn.Name = "ShakerSortBtn";
             this.ShakerSortBtn.Size = new System.Drawing.Size(129, 42);
             this.ShakerSortBtn.TabIndex = 9;
-            this.ShakerSortBtn.Text = "ShakerSort";
+            this.ShakerSortBtn.Text = "Shaker Sort";
             this.ShakerSortBtn.UseVisualStyleBackColor = true;
             this.ShakerSortBtn.Click += new System.EventHandler(this.ShakerSortBtn_Click);
+            // 
+            // InsertionSortBtn
+            // 
+            this.InsertionSortBtn.Location = new System.Drawing.Point(282, 217);
+            this.InsertionSortBtn.Name = "InsertionSortBtn";
+            this.InsertionSortBtn.Size = new System.Drawing.Size(129, 42);
+            this.InsertionSortBtn.TabIndex = 10;
+            this.InsertionSortBtn.Text = "Insertion Sort";
+            this.InsertionSortBtn.UseVisualStyleBackColor = true;
+            this.InsertionSortBtn.Click += new System.EventHandler(this.InsertionSortBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 652);
+            this.Controls.Add(this.InsertionSortBtn);
             this.Controls.Add(this.ShakerSortBtn);
             this.Controls.Add(this.SwopCountLbl);
             this.Controls.Add(this.CompareCountLbl);
@@ -214,6 +226,7 @@
         private System.Windows.Forms.Label CompareCountLbl;
         private System.Windows.Forms.Label SwopCountLbl;
         private System.Windows.Forms.Button ShakerSortBtn;
+        private System.Windows.Forms.Button InsertionSortBtn;
     }
 }
 
