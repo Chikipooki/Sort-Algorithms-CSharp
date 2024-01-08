@@ -66,21 +66,20 @@ namespace SortAlgorithmsCSharp
             DrawItems(items);
         }
 
-        private void BubbleSortBtn_Click(object sender, EventArgs e)
+        private void BtnClick(AlgorithmBase<SortedItem> algorithm)
         {
             RefreshItems();
 
-            var bubble = new BubbleSort<SortedItem>(items);
-            bubble.CompareEvent += Bubble_CompereEvent;
-            bubble.SwopEvent += Bubble_SwopEvent;
-            var time = bubble.Sort();
+            algorithm.CompareEvent += Algorithm_CompereEvent;
+            algorithm.SwopEvent += Algorithm_SwopEvent;
+            var time = algorithm.Sort();
 
             TimeLbl.Text = "Время: " + time.Seconds;
-            CompareCountLbl.Text = "Количество сравнений: " + bubble.ComparsionCount;
-            SwopCountLbl.Text = "Количество обменов: " + bubble.SwopCount;
+            CompareCountLbl.Text = "Количество сравнений: " + algorithm.ComparsionCount;
+            SwopCountLbl.Text = "Количество обменов: " + algorithm.SwopCount;
         }
 
-        private void Bubble_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void Algorithm_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             var temp = e.Item1.Number;
             e.Item1.SetPosition(e.Item2.Number);
@@ -89,12 +88,26 @@ namespace SortAlgorithmsCSharp
             panel3.Refresh();
         }
 
-        private void Bubble_CompereEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void Algorithm_CompereEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             e.Item1.SetColor(Color.Red);
             e.Item2.SetColor(Color.Green);
 
             panel3.Refresh();
         }
+
+        private void BubbleSortBtn_Click(object sender, EventArgs e)
+        {
+            var bubble = new BubbleSort<SortedItem>(items);
+            BtnClick(bubble);
+        }
+
+        private void ShakerSortBtn_Click(object sender, EventArgs e)
+        {
+            var shaker = new ShakerSort<SortedItem>(items);
+            BtnClick(shaker);
+        }
+
+
     }
 }

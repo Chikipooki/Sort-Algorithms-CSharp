@@ -41,6 +41,7 @@
             this.TimeLbl = new System.Windows.Forms.Label();
             this.CompareCountLbl = new System.Windows.Forms.Label();
             this.SwopCountLbl = new System.Windows.Forms.Label();
+            this.ShakerSortBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +129,7 @@
             // 
             // BubbleSortBtn
             // 
-            this.BubbleSortBtn.Location = new System.Drawing.Point(467, 220);
+            this.BubbleSortBtn.Location = new System.Drawing.Point(12, 217);
             this.BubbleSortBtn.Name = "BubbleSortBtn";
             this.BubbleSortBtn.Size = new System.Drawing.Size(129, 42);
             this.BubbleSortBtn.TabIndex = 5;
@@ -139,7 +140,7 @@
             // TimeLbl
             // 
             this.TimeLbl.AutoSize = true;
-            this.TimeLbl.Location = new System.Drawing.Point(13, 222);
+            this.TimeLbl.Location = new System.Drawing.Point(12, 262);
             this.TimeLbl.Name = "TimeLbl";
             this.TimeLbl.Size = new System.Drawing.Size(62, 20);
             this.TimeLbl.TabIndex = 6;
@@ -148,7 +149,7 @@
             // CompareCountLbl
             // 
             this.CompareCountLbl.AutoSize = true;
-            this.CompareCountLbl.Location = new System.Drawing.Point(13, 242);
+            this.CompareCountLbl.Location = new System.Drawing.Point(12, 282);
             this.CompareCountLbl.Name = "CompareCountLbl";
             this.CompareCountLbl.Size = new System.Drawing.Size(153, 20);
             this.CompareCountLbl.TabIndex = 7;
@@ -157,17 +158,28 @@
             // SwopCountLbl
             // 
             this.SwopCountLbl.AutoSize = true;
-            this.SwopCountLbl.Location = new System.Drawing.Point(13, 262);
+            this.SwopCountLbl.Location = new System.Drawing.Point(12, 302);
             this.SwopCountLbl.Name = "SwopCountLbl";
             this.SwopCountLbl.Size = new System.Drawing.Size(134, 20);
             this.SwopCountLbl.TabIndex = 8;
             this.SwopCountLbl.Text = "Кол-во обменов:";
+            // 
+            // ShakerSortBtn
+            // 
+            this.ShakerSortBtn.Location = new System.Drawing.Point(147, 217);
+            this.ShakerSortBtn.Name = "ShakerSortBtn";
+            this.ShakerSortBtn.Size = new System.Drawing.Size(129, 42);
+            this.ShakerSortBtn.TabIndex = 9;
+            this.ShakerSortBtn.Text = "ShakerSort";
+            this.ShakerSortBtn.UseVisualStyleBackColor = true;
+            this.ShakerSortBtn.Click += new System.EventHandler(this.ShakerSortBtn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1135, 652);
+            this.Controls.Add(this.ShakerSortBtn);
             this.Controls.Add(this.SwopCountLbl);
             this.Controls.Add(this.CompareCountLbl);
             this.Controls.Add(this.TimeLbl);
@@ -201,6 +213,7 @@
         private System.Windows.Forms.Label TimeLbl;
         private System.Windows.Forms.Label CompareCountLbl;
         private System.Windows.Forms.Label SwopCountLbl;
+        private System.Windows.Forms.Button ShakerSortBtn;
     }
 }
 
