@@ -3,6 +3,7 @@ using SortAlgorithms;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SortAlgorithmsCSharp
@@ -10,6 +11,7 @@ namespace SortAlgorithmsCSharp
     public partial class Form1 : Form
     {
         private List<SortedItem> items = new List<SortedItem>();
+        private const int Sleep = 50;
 
         public Form1()
         {
@@ -92,8 +94,15 @@ namespace SortAlgorithmsCSharp
         {
             e.Item1.SetColor(Color.Red);
             e.Item2.SetColor(Color.Green);
-
             panel3.Refresh();
+
+            Thread.Sleep(Sleep);
+
+            e.Item1.SetColor(Color.Blue);
+            e.Item2.SetColor(Color.Blue);
+            panel3.Refresh();
+
+            Thread.Sleep(Sleep);
         }
 
         private void BubbleSortBtn_Click(object sender, EventArgs e)
