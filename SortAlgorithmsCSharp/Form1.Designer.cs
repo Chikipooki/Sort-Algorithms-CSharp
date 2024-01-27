@@ -131,7 +131,7 @@
             // 
             // BubbleSortBtn
             // 
-            this.BubbleSortBtn.Location = new System.Drawing.Point(12, 217);
+            this.BubbleSortBtn.Location = new System.Drawing.Point(12, 220);
             this.BubbleSortBtn.Name = "BubbleSortBtn";
             this.BubbleSortBtn.Size = new System.Drawing.Size(129, 42);
             this.BubbleSortBtn.TabIndex = 5;
@@ -142,7 +142,7 @@
             // TimeLbl
             // 
             this.TimeLbl.AutoSize = true;
-            this.TimeLbl.Location = new System.Drawing.Point(12, 262);
+            this.TimeLbl.Location = new System.Drawing.Point(12, 271);
             this.TimeLbl.Name = "TimeLbl";
             this.TimeLbl.Size = new System.Drawing.Size(62, 20);
             this.TimeLbl.TabIndex = 6;
@@ -151,7 +151,7 @@
             // CompareCountLbl
             // 
             this.CompareCountLbl.AutoSize = true;
-            this.CompareCountLbl.Location = new System.Drawing.Point(12, 282);
+            this.CompareCountLbl.Location = new System.Drawing.Point(12, 291);
             this.CompareCountLbl.Name = "CompareCountLbl";
             this.CompareCountLbl.Size = new System.Drawing.Size(153, 20);
             this.CompareCountLbl.TabIndex = 7;
@@ -160,7 +160,7 @@
             // SwopCountLbl
             // 
             this.SwopCountLbl.AutoSize = true;
-            this.SwopCountLbl.Location = new System.Drawing.Point(12, 302);
+            this.SwopCountLbl.Location = new System.Drawing.Point(12, 311);
             this.SwopCountLbl.Name = "SwopCountLbl";
             this.SwopCountLbl.Size = new System.Drawing.Size(134, 20);
             this.SwopCountLbl.TabIndex = 8;
@@ -168,7 +168,7 @@
             // 
             // ShakerSortBtn
             // 
-            this.ShakerSortBtn.Location = new System.Drawing.Point(147, 217);
+            this.ShakerSortBtn.Location = new System.Drawing.Point(147, 220);
             this.ShakerSortBtn.Name = "ShakerSortBtn";
             this.ShakerSortBtn.Size = new System.Drawing.Size(129, 42);
             this.ShakerSortBtn.TabIndex = 9;
@@ -178,7 +178,7 @@
             // 
             // InsertionSortBtn
             // 
-            this.InsertionSortBtn.Location = new System.Drawing.Point(282, 217);
+            this.InsertionSortBtn.Location = new System.Drawing.Point(282, 220);
             this.InsertionSortBtn.Name = "InsertionSortBtn";
             this.InsertionSortBtn.Size = new System.Drawing.Size(129, 42);
             this.InsertionSortBtn.TabIndex = 10;
