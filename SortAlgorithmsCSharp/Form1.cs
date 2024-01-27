@@ -128,5 +128,11 @@ namespace SortAlgorithmsCSharp
             var shell = new ShellSort<SortedItem>(items);
             BtnClick(shell);
         }
+
+        private void SelectionSortBtn_Click(object sender, EventArgs e)
+        {
+            var selection = new SelectionSort<SortedItem>(items);
+            BtnClick(selection);
+        }
     }
 }
