@@ -1,11 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Algorithm;
+﻿using Algorithm.DataStructures;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Algorithm.DataStructures;
 
 namespace Algorithm.Tests
 {
@@ -145,6 +142,23 @@ namespace Algorithm.Tests
             for (int i = 0; i < Items.Count; i++)
             {
                 Assert.AreEqual(Sorted[i], heap.Items[i]);
+            }
+        }
+
+        [TestMethod()]
+        public void SelectionSortTest()
+        {
+            //arrenge
+            var selection = new SelectionSort<int>();
+            selection.Items.AddRange(Items);
+
+            //act
+            selection.Sort();
+
+            //assert
+            for (int i = 0; i < Items.Count; i++)
+            {
+                Assert.AreEqual(Sorted[i], selection.Items[i]);
             }
         }
     }
