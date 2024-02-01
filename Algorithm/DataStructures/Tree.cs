@@ -1,49 +1,84 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Algorithm.DataStructures
 {
-    internal class Tree<T> where T : IComparable
+    public class Tree<T> : AlgorithmBase<T> where T : IComparable
     {
-        public Node<T> Root { get; private set; }
-        public int Counter { get; private set; }
-
-        public Tree() { }
 
         public Tree(IEnumerable<T> items)
         {
-            foreach (var item in items)
+            var list = items.ToList();
+            for (int i = 0; i < list.Count; i++)
             {
-                Add(item);
+                var item = list[i];
+                Items.Add(item);
+
+                var node = new Node<T>(item, i);
+                Add(node);
             }
         }
 
-        public void Add(T data)
+        public Tree() { }
+
+        public int Count { get; private set; }
+        private Node<T> Root { get; set; }
+
+        protected override void MakeSort()
+        {
+            var result = Inorder(Root).Select(r => r.Data).ToList();
+
+            for (int i = 0; i < result.Count; i++)
+            {
+                Set(i, result[i]);
+            }
+        }
+
+        private void Add(Node<T> node)
         {
             if (Root == null)
             {
-                Root = new Node<T>(data);
-                Counter = 1;
+                Root = node;
+                Count = 1;
                 return;
             }
 
-            Root.Add(data);
-            Counter++;
+            Add(Root, node);
+            Count++;
         }
 
-        public List<T> Inorder()
+        private void Add(Node<T> node, Node<T> newNode)
         {
-            if (Root == null)
+            if (Compare(node.Data, newNode.Data) == 1)
             {
-                return new List<T>();
-            }
+                if (node.Left == null)
+                {
 
-            return Inorder(Root);
+                    node.Left = newNode;
+                }
+                else
+                {
+
+                    Add(node.Left, newNode);
+                }
+            }
+            else
+            {
+                if (node.Right == null)
+                {
+                    node.Right = newNode;
+                }
+                else
+                {
+                    Add(node.Right, newNode);
+                }
+            }
         }
 
-        private List<T> Inorder(Node<T> node)
+        private List<Node<T>> Inorder(Node<T> node)
         {
-            var list = new List<T>();
+            var list = new List<Node<T>>();
             if (node != null)
             {
                 if (node.Left != null)
@@ -51,7 +86,7 @@ namespace Algorithm.DataStructures
                     list.AddRange(Inorder(node.Left));
                 }
 
-                list.Add(node.Data);
+                list.Add(node);
 
                 if (node.Right != null)
                 {
@@ -61,5 +96,7 @@ namespace Algorithm.DataStructures
 
             return list;
         }
+
+
     }
 }

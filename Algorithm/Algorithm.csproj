@@ -56,7 +56,6 @@
     <Compile Include="SelectionSort.cs" />
     <Compile Include="ShakerSort.cs" />
     <Compile Include="ShellSort.cs" />
-    <Compile Include="TreeSort.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
