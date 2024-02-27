@@ -48,6 +48,12 @@ namespace SortAlgorithmsCSharp
             FillTextBox.Text = " ";
         }
 
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            items.Clear();
+        }
+
         private void DrawItems(List<SortedItem> items)
         {
             panel3.Controls.Clear();
