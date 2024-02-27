@@ -23,6 +23,7 @@ namespace Algorithm
         private int GetMaxLength(List<T> collection)
         {
             int length = 0;
+
             foreach (var item in collection)
             {
                 if (item.GetHashCode() < 0)
@@ -43,6 +44,7 @@ namespace Algorithm
         {
             var result = new List<T>();
             var groups = new List<List<T>>();
+
             for (int i = 0; i < 10; i++)
             {
                 groups.Add(new List<T>());
