@@ -90,7 +90,7 @@ namespace SortAlgorithmsCSharp
             algorithm.SetEvent += AlgorithmSetEvent;
             var time = algorithm.Sort();
 
-            TimeLbl.Text = "Время: " + time.Seconds;
+            TimeLbl.Text = "Время выполнения: " + time.Seconds;
             CompareCountLbl.Text = "Количество сравнений: " + algorithm.ComparsionCount;
             SwopCountLbl.Text = "Количество обменов: " + algorithm.SwopCount;
         }
@@ -136,7 +136,6 @@ namespace SortAlgorithmsCSharp
 
             Thread.Sleep(Sleep);
         }
-
 
         private void BubbleSortBtn_Click(object sender, EventArgs e)
         {
