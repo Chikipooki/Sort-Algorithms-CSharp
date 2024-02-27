@@ -197,5 +197,11 @@ namespace SortAlgorithmsCSharp
             BtnClick(msdRedix);
         }
 
+        private void MergeSortBtn_Click(object sender, EventArgs e)
+        {
+            var merge = new MergeSort<SortedItem>(items);
+            BtnClick(merge);
+        }
+
     }
 }
