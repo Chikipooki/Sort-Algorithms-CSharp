@@ -184,5 +184,11 @@ namespace SortAlgorithmsCSharp
             var tree = new Tree<SortedItem>(items);
             BtnClick(tree);
         }
+
+        private void LsdRadixSortBtn_Click(object sender, EventArgs e)
+        {
+            var lsdRedix = new LsdRedixSort<SortedItem>(items);
+            BtnClick(lsdRedix);
+        }
     }
 }
