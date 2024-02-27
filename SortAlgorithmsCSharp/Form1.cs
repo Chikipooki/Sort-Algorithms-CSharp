@@ -79,8 +79,9 @@ namespace SortAlgorithmsCSharp
             }
             panel3.Refresh();
 
-            algorithm.CompareEvent += Algorithm_CompereEvent;
-            algorithm.SwopEvent += Algorithm_SwopEvent;
+            algorithm.CompareEvent += AlgorithmCompereEvent;
+            algorithm.SwopEvent += AlgorithmSwopEvent;
+            algorithm.SetEvent += AlgorithmSetEvent;
             var time = algorithm.Sort();
 
             TimeLbl.Text = "Время: " + time.Seconds;
@@ -88,7 +89,7 @@ namespace SortAlgorithmsCSharp
             SwopCountLbl.Text = "Количество обменов: " + algorithm.SwopCount;
         }
 
-        private void Algorithm_SwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void AlgorithmSwopEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             var temp = e.Item1.Number;
             e.Item1.SetPosition(e.Item2.Number);
@@ -97,7 +98,7 @@ namespace SortAlgorithmsCSharp
             panel3.Refresh();
         }
 
-        private void Algorithm_CompereEvent(object sender, Tuple<SortedItem, SortedItem> e)
+        private void AlgorithmCompereEvent(object sender, Tuple<SortedItem, SortedItem> e)
         {
             e.Item1.SetColor(Color.Red);
             e.Item2.SetColor(Color.Green);
@@ -111,6 +112,25 @@ namespace SortAlgorithmsCSharp
 
             Thread.Sleep(Sleep);
         }
+
+        private void AlgorithmSetEvent(object sender, Tuple<int, SortedItem> e)
+        {
+            e.Item2.SetColor(Color.Red);
+            panel3.Refresh();
+
+            Thread.Sleep(Sleep);
+
+            e.Item2.SetPosition(e.Item1);
+            panel3.Refresh();
+
+            Thread.Sleep(Sleep);
+
+            e.Item2.SetColor(Color.Blue);
+            panel3.Refresh();
+
+            Thread.Sleep(Sleep);
+        }
+
 
         private void BubbleSortBtn_Click(object sender, EventArgs e)
         {
@@ -152,6 +172,12 @@ namespace SortAlgorithmsCSharp
         {
             var gnome = new GnomeSort<SortedItem>(items);
             BtnClick(gnome);
+        }
+
+        private void TreeSortBtn_Click(object sender, EventArgs e)
+        {
+            var tree = new Tree<SortedItem>(items);
+            BtnClick(tree);
         }
     }
 }

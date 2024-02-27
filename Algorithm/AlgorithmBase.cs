@@ -55,11 +55,6 @@ namespace Algorithm
             }
         }
 
-        /// <summary>
-        /// Сравнивает текущий экземпляр с другим объектом того же типа и меняет местами текущий и другой объект.
-        /// </summary>
-        /// <param name="positionA">Первый объект типа int </param>
-        /// <param name="positionB">Второй объект типа int </param>
         protected void Swop(int positionA, int positionB)
         {
             if (positionA < Items.Count && positionB < Items.Count)

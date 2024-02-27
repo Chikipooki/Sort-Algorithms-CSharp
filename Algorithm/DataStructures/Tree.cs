@@ -6,7 +6,6 @@ namespace Algorithm.DataStructures
 {
     public class Tree<T> : AlgorithmBase<T> where T : IComparable
     {
-
         public Tree(IEnumerable<T> items)
         {
             var list = items.ToList();
