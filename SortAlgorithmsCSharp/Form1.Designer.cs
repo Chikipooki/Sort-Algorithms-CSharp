@@ -49,6 +49,7 @@
             this.GnomeSortBtn = new System.Windows.Forms.Button();
             this.TreeSortBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.QuickSortBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -294,6 +295,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Сортировки";
             // 
+            // QuickSortBtn
+            // 
+            this.QuickSortBtn.Location = new System.Drawing.Point(425, 66);
+            this.QuickSortBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.QuickSortBtn.Name = "QuickSortBtn";
+            this.QuickSortBtn.Size = new System.Drawing.Size(80, 35);
+            this.QuickSortBtn.TabIndex = 19;
+            this.QuickSortBtn.Text = "Quick Sort";
+            this.QuickSortBtn.UseVisualStyleBackColor = true;
+            this.QuickSortBtn.Click += new System.EventHandler(this.QuickSortBtn_Click);
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel4);

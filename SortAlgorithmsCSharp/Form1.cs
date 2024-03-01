@@ -203,5 +203,10 @@ namespace SortAlgorithmsCSharp
             BtnClick(merge);
         }
 
+        private void QuickSortBtn_Click(object sender, EventArgs e)
+        {
+            var quick = new QuickSort<SortedItem>(items);
+            BtnClick(quick);
+        }
     }
 }
