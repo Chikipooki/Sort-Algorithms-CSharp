@@ -193,7 +193,7 @@ namespace SortAlgorithmsCSharp
 
         private void MsdRadixSortBtn_Click(object sender, EventArgs e)
         {
-            var msdRedix = new LsdRedixSort<SortedItem>(items);
+            var msdRedix = new MsdRedixSort<SortedItem>(items);
             BtnClick(msdRedix);
         }
 
