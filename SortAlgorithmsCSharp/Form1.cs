@@ -90,9 +90,11 @@ namespace SortAlgorithmsCSharp
             algorithm.SetEvent += AlgorithmSetEvent;
             var time = algorithm.Sort();
 
-            TimeLbl.Text = "Время выполнения: " + time.Seconds;
-            CompareCountLbl.Text = "Количество сравнений: " + algorithm.ComparsionCount;
-            SwopCountLbl.Text = "Количество обменов: " + algorithm.SwopCount;
+            TimeMinLbl.Text = "Минут: " + time.Minutes;
+            TimeSecondLbl.Text = "Секунд: " + time.Seconds;
+            TimeMiliSecondLbl.Text = "Миллисекунд: " + time.Milliseconds;
+            CompareCountLbl.Text = "Сравнений: " + algorithm.ComparsionCount;
+            SwopCountLbl.Text = "Обменов: " + algorithm.SwopCount;
         }
 
         private void AlgorithmSwopEvent(object sender, Tuple<SortedItem, SortedItem> e)

@@ -33,12 +33,11 @@
             this.AddBtn = new System.Windows.Forms.Button();
             this.AddTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ArrayLbl = new System.Windows.Forms.Label();
             this.FillBtn = new System.Windows.Forms.Button();
+            this.ArrayLbl = new System.Windows.Forms.Label();
             this.FillTextBox = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.BubbleSortBtn = new System.Windows.Forms.Button();
-            this.TimeLbl = new System.Windows.Forms.Label();
+            this.TimeSecondLbl = new System.Windows.Forms.Label();
             this.CompareCountLbl = new System.Windows.Forms.Label();
             this.SwopCountLbl = new System.Windows.Forms.Label();
             this.ShakerSortBtn = new System.Windows.Forms.Button();
@@ -50,20 +49,26 @@
             this.TreeSortBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.QuickSortBtn = new System.Windows.Forms.Button();
+            this.MergeSortBtn = new System.Windows.Forms.Button();
+            this.MsdRadixSortBtn = new System.Windows.Forms.Button();
+            this.LsdRadixSortBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.ClearBtn = new System.Windows.Forms.Button();
-            this.LsdRadixSortBtn = new System.Windows.Forms.Button();
-            this.MsdRadixSortBtn = new System.Windows.Forms.Button();
-            this.MergeSortBtn = new System.Windows.Forms.Button();
-            this.QuickSortBtn = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.TimeMiliSecondLbl = new System.Windows.Forms.Label();
+            this.TimeMinLbl = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,16 +122,6 @@
             this.panel2.Size = new System.Drawing.Size(236, 50);
             this.panel2.TabIndex = 3;
             // 
-            // ArrayLbl
-            // 
-            this.ArrayLbl.AutoSize = true;
-            this.ArrayLbl.Location = new System.Drawing.Point(2, 5);
-            this.ArrayLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ArrayLbl.Name = "ArrayLbl";
-            this.ArrayLbl.Size = new System.Drawing.Size(146, 13);
-            this.ArrayLbl.TabIndex = 2;
-            this.ArrayLbl.Text = "Добавить случайные числа";
-            // 
             // FillBtn
             // 
             this.FillBtn.Location = new System.Drawing.Point(160, 5);
@@ -138,6 +133,16 @@
             this.FillBtn.UseVisualStyleBackColor = true;
             this.FillBtn.Click += new System.EventHandler(this.FillBtn_Click);
             // 
+            // ArrayLbl
+            // 
+            this.ArrayLbl.AutoSize = true;
+            this.ArrayLbl.Location = new System.Drawing.Point(2, 5);
+            this.ArrayLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ArrayLbl.Name = "ArrayLbl";
+            this.ArrayLbl.Size = new System.Drawing.Size(146, 13);
+            this.ArrayLbl.TabIndex = 2;
+            this.ArrayLbl.Text = "Добавить случайные числа";
+            // 
             // FillTextBox
             // 
             this.FillTextBox.Location = new System.Drawing.Point(5, 20);
@@ -145,16 +150,6 @@
             this.FillTextBox.Name = "FillTextBox";
             this.FillTextBox.Size = new System.Drawing.Size(148, 20);
             this.FillTextBox.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Location = new System.Drawing.Point(11, 11);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(762, 131);
-            this.panel3.TabIndex = 4;
             // 
             // BubbleSortBtn
             // 
@@ -167,35 +162,35 @@
             this.BubbleSortBtn.UseVisualStyleBackColor = true;
             this.BubbleSortBtn.Click += new System.EventHandler(this.BubbleSortBtn_Click);
             // 
-            // TimeLbl
+            // TimeSecondLbl
             // 
-            this.TimeLbl.AutoSize = true;
-            this.TimeLbl.Location = new System.Drawing.Point(6, 16);
-            this.TimeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.TimeLbl.Name = "TimeLbl";
-            this.TimeLbl.Size = new System.Drawing.Size(108, 13);
-            this.TimeLbl.TabIndex = 6;
-            this.TimeLbl.Text = "Время выполнения:";
+            this.TimeSecondLbl.AutoSize = true;
+            this.TimeSecondLbl.Location = new System.Drawing.Point(5, 29);
+            this.TimeSecondLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TimeSecondLbl.Name = "TimeSecondLbl";
+            this.TimeSecondLbl.Size = new System.Drawing.Size(49, 13);
+            this.TimeSecondLbl.TabIndex = 6;
+            this.TimeSecondLbl.Text = "Секунд: ";
             // 
             // CompareCountLbl
             // 
             this.CompareCountLbl.AutoSize = true;
-            this.CompareCountLbl.Location = new System.Drawing.Point(6, 29);
+            this.CompareCountLbl.Location = new System.Drawing.Point(5, 16);
             this.CompareCountLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CompareCountLbl.Name = "CompareCountLbl";
-            this.CompareCountLbl.Size = new System.Drawing.Size(126, 13);
+            this.CompareCountLbl.Size = new System.Drawing.Size(65, 13);
             this.CompareCountLbl.TabIndex = 7;
-            this.CompareCountLbl.Text = "Количество сравнений:";
+            this.CompareCountLbl.Text = "Сравнений:";
             // 
             // SwopCountLbl
             // 
             this.SwopCountLbl.AutoSize = true;
-            this.SwopCountLbl.Location = new System.Drawing.Point(6, 42);
+            this.SwopCountLbl.Location = new System.Drawing.Point(5, 29);
             this.SwopCountLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SwopCountLbl.Name = "SwopCountLbl";
-            this.SwopCountLbl.Size = new System.Drawing.Size(116, 13);
+            this.SwopCountLbl.Size = new System.Drawing.Size(56, 13);
             this.SwopCountLbl.TabIndex = 8;
-            this.SwopCountLbl.Text = "Количество обменов:";
+            this.SwopCountLbl.Text = "Обменов:";
             // 
             // ShakerSortBtn
             // 
@@ -288,7 +283,7 @@
             this.groupBox3.Controls.Add(this.InsertionSortBtn);
             this.groupBox3.Controls.Add(this.SelectionSortBtn);
             this.groupBox3.Controls.Add(this.GnomeSortBtn);
-            this.groupBox3.Location = new System.Drawing.Point(262, 147);
+            this.groupBox3.Location = new System.Drawing.Point(261, 159);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(511, 112);
             this.groupBox3.TabIndex = 23;
@@ -305,29 +300,51 @@
             this.QuickSortBtn.Text = "Quick Sort";
             this.QuickSortBtn.UseVisualStyleBackColor = true;
             this.QuickSortBtn.Click += new System.EventHandler(this.QuickSortBtn_Click);
+            // 
+            // MergeSortBtn
+            // 
+            this.MergeSortBtn.Location = new System.Drawing.Point(341, 66);
+            this.MergeSortBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.MergeSortBtn.Name = "MergeSortBtn";
+            this.MergeSortBtn.Size = new System.Drawing.Size(80, 35);
+            this.MergeSortBtn.TabIndex = 18;
+            this.MergeSortBtn.Text = "Merge Sort";
+            this.MergeSortBtn.UseVisualStyleBackColor = true;
+            this.MergeSortBtn.Click += new System.EventHandler(this.MergeSortBtn_Click);
+            // 
+            // MsdRadixSortBtn
+            // 
+            this.MsdRadixSortBtn.Location = new System.Drawing.Point(257, 66);
+            this.MsdRadixSortBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.MsdRadixSortBtn.Name = "MsdRadixSortBtn";
+            this.MsdRadixSortBtn.Size = new System.Drawing.Size(80, 35);
+            this.MsdRadixSortBtn.TabIndex = 17;
+            this.MsdRadixSortBtn.Text = "MSD Radix Sort";
+            this.MsdRadixSortBtn.UseVisualStyleBackColor = true;
+            this.MsdRadixSortBtn.Click += new System.EventHandler(this.MsdRadixSortBtn_Click);
+            // 
+            // LsdRadixSortBtn
+            // 
+            this.LsdRadixSortBtn.Location = new System.Drawing.Point(173, 66);
+            this.LsdRadixSortBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.LsdRadixSortBtn.Name = "LsdRadixSortBtn";
+            this.LsdRadixSortBtn.Size = new System.Drawing.Size(80, 35);
+            this.LsdRadixSortBtn.TabIndex = 16;
+            this.LsdRadixSortBtn.Text = "LSD Radix Sort";
+            this.LsdRadixSortBtn.UseVisualStyleBackColor = true;
+            this.LsdRadixSortBtn.Click += new System.EventHandler(this.LsdRadixSortBtn_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel4);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 147);
+            this.groupBox1.Location = new System.Drawing.Point(10, 159);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(245, 180);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Операции с числами";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.TimeLbl);
-            this.groupBox2.Controls.Add(this.CompareCountLbl);
-            this.groupBox2.Controls.Add(this.SwopCountLbl);
-            this.groupBox2.Location = new System.Drawing.Point(262, 265);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(511, 62);
-            this.groupBox2.TabIndex = 25;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Данные";
             // 
             // panel4
             // 
@@ -349,59 +366,81 @@
             this.ClearBtn.UseVisualStyleBackColor = true;
             this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
-            // LsdRadixSortBtn
+            // groupBox2
             // 
-            this.LsdRadixSortBtn.Location = new System.Drawing.Point(173, 66);
-            this.LsdRadixSortBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.LsdRadixSortBtn.Name = "LsdRadixSortBtn";
-            this.LsdRadixSortBtn.Size = new System.Drawing.Size(80, 35);
-            this.LsdRadixSortBtn.TabIndex = 16;
-            this.LsdRadixSortBtn.Text = "LSD Radix Sort";
-            this.LsdRadixSortBtn.UseVisualStyleBackColor = true;
-            this.LsdRadixSortBtn.Click += new System.EventHandler(this.LsdRadixSortBtn_Click);
+            this.groupBox2.Controls.Add(this.TimeMinLbl);
+            this.groupBox2.Controls.Add(this.TimeMiliSecondLbl);
+            this.groupBox2.Controls.Add(this.TimeSecondLbl);
+            this.groupBox2.Location = new System.Drawing.Point(261, 277);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(253, 62);
+            this.groupBox2.TabIndex = 25;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Время выполнения";
             // 
-            // MsdRadixSortBtn
+            // groupBox4
             // 
-            this.MsdRadixSortBtn.Location = new System.Drawing.Point(257, 66);
-            this.MsdRadixSortBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.MsdRadixSortBtn.Name = "MsdRadixSortBtn";
-            this.MsdRadixSortBtn.Size = new System.Drawing.Size(80, 35);
-            this.MsdRadixSortBtn.TabIndex = 17;
-            this.MsdRadixSortBtn.Text = "MSD Radix Sort";
-            this.MsdRadixSortBtn.UseVisualStyleBackColor = true;
-            this.MsdRadixSortBtn.Click += new System.EventHandler(this.MsdRadixSortBtn_Click);
+            this.groupBox4.Controls.Add(this.CompareCountLbl);
+            this.groupBox4.Controls.Add(this.SwopCountLbl);
+            this.groupBox4.Location = new System.Drawing.Point(520, 277);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(252, 62);
+            this.groupBox4.TabIndex = 26;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Подсчёт";
             // 
-            // MergeSortBtn
+            // TimeMiliSecondLbl
             // 
-            this.MergeSortBtn.Location = new System.Drawing.Point(341, 66);
-            this.MergeSortBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.MergeSortBtn.Name = "MergeSortBtn";
-            this.MergeSortBtn.Size = new System.Drawing.Size(80, 35);
-            this.MergeSortBtn.TabIndex = 18;
-            this.MergeSortBtn.Text = "Merge Sort";
-            this.MergeSortBtn.UseVisualStyleBackColor = true;
-            this.MergeSortBtn.Click += new System.EventHandler(this.MergeSortBtn_Click);
+            this.TimeMiliSecondLbl.AutoSize = true;
+            this.TimeMiliSecondLbl.Location = new System.Drawing.Point(5, 42);
+            this.TimeMiliSecondLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TimeMiliSecondLbl.Name = "TimeMiliSecondLbl";
+            this.TimeMiliSecondLbl.Size = new System.Drawing.Size(81, 13);
+            this.TimeMiliSecondLbl.TabIndex = 6;
+            this.TimeMiliSecondLbl.Text = "Миллисекунд: ";
             // 
-            // QuickSortBtn
+            // TimeMinLbl
             // 
-            this.QuickSortBtn.Location = new System.Drawing.Point(425, 66);
-            this.QuickSortBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.QuickSortBtn.Name = "QuickSortBtn";
-            this.QuickSortBtn.Size = new System.Drawing.Size(80, 35);
-            this.QuickSortBtn.TabIndex = 19;
-            this.QuickSortBtn.Text = "Quick Sort";
-            this.QuickSortBtn.UseVisualStyleBackColor = true;
-            this.QuickSortBtn.Click += new System.EventHandler(this.QuickSortBtn_Click);
+            this.TimeMinLbl.AutoSize = true;
+            this.TimeMinLbl.Location = new System.Drawing.Point(5, 16);
+            this.TimeMinLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TimeMinLbl.Name = "TimeMinLbl";
+            this.TimeMinLbl.Size = new System.Drawing.Size(44, 13);
+            this.TimeMinLbl.TabIndex = 7;
+            this.TimeMinLbl.Text = "Минут: ";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.panel3);
+            this.groupBox5.Location = new System.Drawing.Point(11, 7);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(756, 146);
+            this.groupBox5.TabIndex = 27;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Числа";
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Location = new System.Drawing.Point(5, 18);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(746, 123);
+            this.panel3.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 347);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Визуализация алгоритмов";
@@ -411,9 +450,12 @@
             this.panel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.panel4.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -428,9 +470,8 @@
         private System.Windows.Forms.Label ArrayLbl;
         private System.Windows.Forms.Button FillBtn;
         private System.Windows.Forms.TextBox FillTextBox;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button BubbleSortBtn;
-        private System.Windows.Forms.Label TimeLbl;
+        private System.Windows.Forms.Label TimeSecondLbl;
         private System.Windows.Forms.Label CompareCountLbl;
         private System.Windows.Forms.Label SwopCountLbl;
         private System.Windows.Forms.Button ShakerSortBtn;
@@ -449,6 +490,11 @@
         private System.Windows.Forms.Button MergeSortBtn;
         private System.Windows.Forms.Button MsdRadixSortBtn;
         private System.Windows.Forms.Button LsdRadixSortBtn;
+        private System.Windows.Forms.Label TimeMiliSecondLbl;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label TimeMinLbl;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
